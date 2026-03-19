@@ -6,24 +6,24 @@ import chalet5 from "@/assets/chalet-5.jpg";
 import chalet6 from "@/assets/chalet-6.jpg";
 
 const images = [
-  { src: chalet1, alt: "Chalé exterior noturno" },
-  { src: chalet2, alt: "Interior do chalé - sala" },
-  { src: chalet3, alt: "Chalé com deck e vista" },
-  { src: chalet4, alt: "Suíte premium" },
-  { src: chalet5, alt: "Jacuzzi com vista" },
-  { src: chalet6, alt: "Cozinha gourmet" },
+  { src: chalet1, alt: "Chalé com casal e deck" },
+  { src: chalet2, alt: "Chalé A-frame com montanhas" },
+  { src: chalet3, alt: "Chalé moderno elevado" },
+  { src: chalet4, alt: "Chalé com heliponto" },
+  { src: chalet5, alt: "Chalé com varanda e piscina" },
+  { src: chalet6, alt: "Chalé geodésico panorâmico" },
 ];
 
 const GallerySection = () => {
   return (
     <section id="galeria" className="py-20 md:py-32">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-5 sm:px-6 lg:px-8">
         <div className="text-center scroll-reveal mb-16">
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-            Unidades <span className="gold-gradient-text">Entregues</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+            Unidades <span className="highlight-text">Entregues</span>
           </h2>
           <div className="section-divider" />
-          <p className="text-muted-foreground text-lg max-w-xl mx-auto font-body">
+          <p className="text-muted-foreground text-lg max-w-xl mx-auto">
             Conheça os chalés que já foram entregues com excelência
           </p>
         </div>

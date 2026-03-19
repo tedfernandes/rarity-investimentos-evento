@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,56 +7,55 @@
 @layer base {
   :root {
     --background: 220 20% 7%;
-    --foreground: 40 20% 92%;
+    --foreground: 220 10% 92%;
 
     --card: 220 18% 10%;
-    --card-foreground: 40 20% 92%;
+    --card-foreground: 220 10% 92%;
 
     --popover: 220 18% 10%;
-    --popover-foreground: 40 20% 92%;
+    --popover-foreground: 220 10% 92%;
 
-    --primary: 40 75% 55%;
+    --primary: 220 10% 75%;
     --primary-foreground: 220 20% 7%;
 
     --secondary: 220 15% 15%;
-    --secondary-foreground: 40 20% 92%;
+    --secondary-foreground: 220 10% 92%;
 
     --muted: 220 15% 18%;
-    --muted-foreground: 220 10% 55%;
+    --muted-foreground: 220 10% 50%;
 
-    --accent: 40 75% 55%;
-    --accent-foreground: 220 20% 7%;
+    --accent: 150 60% 42%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 220 15% 18%;
     --input: 220 15% 20%;
-    --ring: 40 75% 55%;
+    --ring: 150 60% 42%;
 
     --radius: 0.75rem;
 
-    --gold: 40 75% 55%;
-    --gold-light: 40 80% 70%;
-    --gold-dark: 40 70% 40%;
+    --green: 150 60% 42%;
+    --green-light: 150 65% 55%;
+    --green-dark: 150 55% 32%;
     --surface-glass: 220 18% 12%;
 
-    --font-display: 'Playfair Display', serif;
-    --font-body: 'Raleway', sans-serif;
+    --font-main: 'Poppins', sans-serif;
 
-    --gradient-gold: linear-gradient(135deg, hsl(40 75% 55%), hsl(40 80% 70%));
+    --gradient-green: linear-gradient(135deg, hsl(150 60% 42%), hsl(150 65% 55%));
     --gradient-dark: linear-gradient(180deg, hsl(220 20% 7%), hsl(220 18% 12%));
-    --shadow-gold: 0 4px 30px hsl(40 75% 55% / 0.15);
+    --shadow-green: 0 4px 30px hsl(150 60% 42% / 0.2);
     --shadow-card: 0 8px 32px hsl(0 0% 0% / 0.3);
 
     --sidebar-background: 220 18% 10%;
-    --sidebar-foreground: 40 20% 92%;
-    --sidebar-primary: 40 75% 55%;
+    --sidebar-foreground: 220 10% 92%;
+    --sidebar-primary: 150 60% 42%;
     --sidebar-primary-foreground: 220 20% 7%;
     --sidebar-accent: 220 15% 15%;
-    --sidebar-accent-foreground: 40 20% 92%;
+    --sidebar-accent-foreground: 220 10% 92%;
     --sidebar-border: 220 15% 18%;
-    --sidebar-ring: 40 75% 55%;
+    --sidebar-ring: 150 60% 42%;
   }
 }
 
@@ -71,11 +70,11 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: var(--font-body);
+    font-family: var(--font-main);
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-display);
+    font-family: var(--font-main);
   }
 }
 
@@ -87,30 +86,27 @@
     box-shadow: var(--shadow-card);
   }
 
-  .gold-gradient-text {
-    background: var(--gradient-gold);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+  .highlight-text {
+    color: hsl(var(--accent));
   }
 
-  .gold-gradient-bg {
-    background: var(--gradient-gold);
+  .green-gradient-bg {
+    background: var(--gradient-green);
   }
 
-  .btn-gold {
+  .btn-green {
     @apply relative overflow-hidden font-semibold tracking-wider uppercase px-8 py-4 rounded-lg text-accent-foreground;
-    background: var(--gradient-gold);
-    box-shadow: var(--shadow-gold);
+    background: var(--gradient-green);
+    box-shadow: var(--shadow-green);
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
 
-  .btn-gold:hover {
+  .btn-green:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 40px hsl(40 75% 55% / 0.3);
+    box-shadow: 0 6px 40px hsl(150 60% 42% / 0.35);
   }
 
-  .btn-gold:active {
+  .btn-green:active {
     transform: translateY(0);
   }
 
@@ -133,15 +129,15 @@
 
   .section-divider {
     @apply w-20 h-0.5 mx-auto my-6;
-    background: var(--gradient-gold);
+    background: var(--gradient-green);
   }
 
   .input-luxury {
-    @apply w-full px-5 py-4 rounded-lg border border-border bg-secondary/50 text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-all duration-300;
+    @apply w-full px-5 py-4 rounded-lg border border-border bg-secondary/50 text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-accent transition-all duration-300;
   }
 
   .input-luxury:focus {
-    box-shadow: 0 0 0 3px hsl(40 75% 55% / 0.15);
+    box-shadow: 0 0 0 3px hsl(150 60% 42% / 0.15);
   }
 
   .gallery-item {
