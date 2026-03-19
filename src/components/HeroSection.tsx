@@ -1,4 +1,5 @@
 import { useState, type FormEvent } from "react";
+import heroBg from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => {
   const [name, setName] = useState("");
