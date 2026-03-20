@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import rarityVideo from "@/assets/rarity-video.mp4";
+import logoRarity from "@/assets/logo-rarity.png";
 import heroBg from "@/assets/hero-bg.jpg";
 import ceoPortrait from "@/assets/ceo-portrait.jpg";
 import chalet1 from "@/assets/chalet-1.jpg";
