@@ -127,7 +127,7 @@ const Index = () => {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
             {galleryImages.map((img, i) => (
               <div key={i} className="scroll-reveal gallery-item aspect-square relative rounded-xl overflow-hidden" style={{ transitionDelay: `${i * 0.08}s` }}>
-                <img src={img.src} alt={img.alt} className={`w-full h-full object-cover ${img.alt === "Iglu Tower" ? "object-[30%_25%] sm:object-[center_25%]" : "object-[30%_center] sm:object-center"}`} loading="lazy" />
+                <img src={img.src} alt={img.alt} className={`w-full h-full object-cover ${img.alt === "Iglu Tower" ? "object-[30%_25%] sm:object-[center_25%]" : img.alt === "A-Frame" ? "object-[50%_30%]" : "object-[30%_center] sm:object-center"}`} loading="lazy" />
                 {img.badge && (
                   <div className="absolute top-0 right-0 overflow-hidden" style={{ width: "120px", height: "120px" }}>
                     <div className="absolute bg-red-600 text-white text-[8px] sm:text-[8px] font-bold uppercase tracking-wider shadow-md" style={{ top: "24px", right: "-34px", transform: "rotate(45deg)", width: "170px", height: "22px" }}>
