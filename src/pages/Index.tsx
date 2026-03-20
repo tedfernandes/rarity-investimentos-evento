@@ -107,7 +107,7 @@ const Index = () => {
         <div className="container mx-auto px-8 sm:px-12 lg:px-24 fade-in fade-in-delay-3">
           <div className="text-center mb-8">
             <h2 className="text-2xl md:text-3xl font-bold uppercase tracking-wider" style={{ color: "#000000" }}>
-              PRIMEIRA EXPANSÃO DE OURO
+              PRIMEIRA EXPANSÃO
             </h2>
             <span className="inline-block px-3 py-1 rounded-full text-xs font-medium tracking-widest uppercase border border-black/20 bg-black/5 text-black/70 mt-3">
               Unidades Entregues
