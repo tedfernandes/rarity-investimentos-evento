@@ -126,7 +126,7 @@ const Index = () => {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
             {galleryImages.map((img, i) => (
-              <div key={i} className="gallery-item aspect-square relative rounded-xl overflow-hidden">
+              <div key={i} className="scroll-reveal gallery-item aspect-square relative rounded-xl overflow-hidden" style={{ transitionDelay: `${i * 0.08}s` }}>
                 <img src={img.src} alt={img.alt} className="w-full h-full object-cover" loading="lazy" style={img.alt === "Iglu Tower" ? { objectPosition: "center 25%" } : undefined} />
                 {img.badge && (
                   <div className="absolute top-0 right-0 overflow-hidden" style={{ width: "180px", height: "180px" }}>
