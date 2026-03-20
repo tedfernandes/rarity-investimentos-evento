@@ -46,11 +46,12 @@ const Index = () => {
             </span>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-[1.05] mb-5 text-white" style={{ textWrap: "balance" }}>
               Pré-lançamento da{" "}
-              <span className="glow-accent">Expansão Rarity Chalés</span>
+              <span className="glow-accent">Expansão Rarity Chalés</span>{" "}
+              para outro estado
             </h1>
             <p className="text-white/70 text-base md:text-lg leading-relaxed mb-8 max-w-lg">
               Evento ao vivo com o CEO <strong className="text-white">Victor Alfenas</strong>.
-              Saiba como ser sócio neste empreendimento de sucesso.
+              Saiba como ser sócio neste empreendimento de sucesso. Não fique de fora desta oportunidade.
             </p>
             <div className="flex flex-wrap gap-5 mb-10">
               <span className="flex items-center gap-2 text-sm text-white/60">
@@ -63,6 +64,10 @@ const Index = () => {
               <span className="flex items-center gap-2 text-sm text-white/60">
                 <svg className="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/></svg>
                 100% Gratuito
+              </span>
+              <span className="flex items-center gap-2 text-sm text-white/60">
+                <svg className="w-4 h-4 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                26/03 às 17:30
               </span>
             </div>
             <a
