@@ -101,7 +101,7 @@ const Index = () => {
           </h2>
           <div className="grid sm:grid-cols-2 gap-3 max-w-3xl mx-auto">
             {highlights.map((item, i) => (
-              <div key={i} className="flex items-center gap-3 p-4 rounded-xl bg-card border border-border" style={{ boxShadow: "var(--shadow-card)" }}>
+              <div key={i} className="scroll-reveal flex items-center gap-3 p-4 rounded-xl bg-card border border-border" style={{ boxShadow: "var(--shadow-card)", transitionDelay: `${i * 0.1}s` }}>
                 <span className="text-xl shrink-0">{item.icon}</span>
                 <p className="text-sm text-foreground/85 leading-relaxed">{item.text}</p>
               </div>
