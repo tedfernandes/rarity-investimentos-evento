@@ -122,8 +122,8 @@ const Index = () => {
               <div key={i} className="gallery-item aspect-square relative rounded-xl overflow-hidden">
                 <img src={img.src} alt={img.alt} className="w-full h-full object-cover" loading="lazy" style={img.alt === "Iglu Tower" ? { objectPosition: "center 25%" } : undefined} />
                 {img.badge && (
-                  <div className="absolute top-0 right-0 overflow-hidden" style={{ width: "160px", height: "160px" }}>
-                    <div className="absolute bg-red-600 text-white text-[10px] font-bold uppercase tracking-wider shadow-md flex items-center justify-center" style={{ top: "32px", right: "-42px", transform: "rotate(45deg)", width: "210px", height: "24px" }}>
+                  <div className="absolute top-0 right-0 overflow-hidden" style={{ width: "180px", height: "180px" }}>
+                    <div className="absolute bg-red-600 text-white text-[10px] font-bold uppercase tracking-wider shadow-md flex items-center justify-center" style={{ top: "38px", right: "-48px", transform: "rotate(45deg)", width: "240px", height: "26px" }}>
                       {img.badge}
                     </div>
                   </div>
