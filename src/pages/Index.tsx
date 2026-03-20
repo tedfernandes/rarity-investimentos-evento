@@ -127,7 +127,9 @@ const Index = () => {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
             {galleryImages.map((img, i) => (
               <div key={i} className="scroll-reveal gallery-item aspect-square relative rounded-xl overflow-hidden" style={{ transitionDelay: `${i * 0.08}s` }}>
-                <img src={img.src} alt={img.alt} className="w-full h-full object-cover" loading="lazy" style={img.alt === "Iglu Tower" ? { objectPosition: "center 25%" } : undefined} />
+                <img src={img.src} alt={img.alt} className="w-full h-full object-cover object-[30%_center] sm:object-center" loading="lazy" style={img.alt === "Iglu Tower" ? { objectPosition: undefined } : undefined} />
+                {/* Iglu Tower override */}
+                {img.alt === "Iglu Tower" && <style>{`.gallery-item:last-child img { object-position: 30% 25% !important; } @media(min-width:640px){ .gallery-item:last-child img { object-position: center 25% !important; } }`}</style>}
                 {img.badge && (
                   <div className="absolute top-0 right-0 overflow-hidden" style={{ width: "120px", height: "120px" }}>
                     <div className="absolute bg-red-600 text-white text-[8px] sm:text-[10px] font-bold uppercase tracking-wider shadow-md" style={{ top: "24px", right: "-34px", transform: "rotate(45deg)", width: "170px", height: "22px" }}>
