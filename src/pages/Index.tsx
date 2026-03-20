@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { useScrollReveal, useParallax } from "@/hooks/use-scroll-animations";
 import rarityVideo from "@/assets/rarity-video.mp4";
 import logoRarity from "@/assets/logo-rarity.png";
 import heroBg from "@/assets/hero-bg.jpg";
@@ -27,6 +28,9 @@ const highlights = [
 ];
 
 const Index = () => {
+  useScrollReveal();
+  useParallax();
+
   useEffect(() => {
     document.documentElement.classList.add("dark");
   }, []);
@@ -91,13 +95,13 @@ const Index = () => {
 
       {/* ===== EVENT — default background ===== */}
       <section className="pt-8 pb-20 md:pt-10 md:pb-28">
-        <div className="container mx-auto px-5 sm:px-6 lg:px-8 fade-in fade-in-delay-2">
+        <div className="container mx-auto px-5 sm:px-6 lg:px-8 scroll-reveal">
           <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">
             O que teremos no <span className="text-accent">evento</span>
           </h2>
           <div className="grid sm:grid-cols-2 gap-3 max-w-3xl mx-auto">
             {highlights.map((item, i) => (
-              <div key={i} className="flex items-center gap-3 p-4 rounded-xl bg-card border border-border" style={{ boxShadow: "var(--shadow-card)" }}>
+              <div key={i} className="scroll-reveal flex items-center gap-3 p-4 rounded-xl bg-card border border-border" style={{ boxShadow: "var(--shadow-card)", transitionDelay: `${i * 0.1}s` }}>
                 <span className="text-xl shrink-0">{item.icon}</span>
                 <p className="text-sm text-foreground/85 leading-relaxed">{item.text}</p>
               </div>
@@ -108,7 +112,7 @@ const Index = () => {
 
       {/* ===== GALLERY — alt background ===== */}
       <section className="section-alt py-14 md:py-20">
-        <div className="container mx-auto px-5 sm:px-6 lg:px-12 fade-in fade-in-delay-3">
+        <div className="container mx-auto px-5 sm:px-6 lg:px-12 scroll-reveal">
           <div className="text-center mb-8">
             <span className="inline-block px-3 py-1 rounded-full text-xs font-medium tracking-widest uppercase border border-black/20 bg-black/5 text-black/70 mb-3">
               Unidades Entregues
@@ -122,7 +126,7 @@ const Index = () => {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
             {galleryImages.map((img, i) => (
-              <div key={i} className="gallery-item aspect-square relative rounded-xl overflow-hidden">
+              <div key={i} className="scroll-reveal gallery-item aspect-square relative rounded-xl overflow-hidden" style={{ transitionDelay: `${i * 0.08}s` }}>
                 <img src={img.src} alt={img.alt} className="w-full h-full object-cover" loading="lazy" style={img.alt === "Iglu Tower" ? { objectPosition: "center 25%" } : undefined} />
                 {img.badge && (
                   <div className="absolute top-0 right-0 overflow-hidden" style={{ width: "180px", height: "180px" }}>
@@ -144,7 +148,7 @@ const Index = () => {
 
       {/* ===== CEO + CTA — default background ===== */}
       <section className="py-14 md:py-20">
-        <div className="container mx-auto px-5 sm:px-6 lg:px-8 fade-in fade-in-delay-4">
+        <div className="container mx-auto px-5 sm:px-6 lg:px-8 scroll-reveal">
           <div className="max-w-5xl mx-auto grid md:grid-cols-[3fr_1fr] gap-6 items-stretch">
             {/* Bio Card */}
             <div className="flex flex-col sm:flex-row items-center gap-6 p-6 md:p-8 rounded-2xl bg-card border border-border" style={{ boxShadow: "var(--shadow-card)" }}>

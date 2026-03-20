@@ -204,9 +204,31 @@
   .fade-in-delay-4 { animation-delay: 0.48s; opacity: 0; }
 
   @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(16px) blur(4px); }
-    to { opacity: 1; transform: translateY(0) blur(0); }
+    from { opacity: 0; transform: translateY(16px); filter: blur(4px); }
+    to { opacity: 1; transform: translateY(0); filter: blur(0); }
   }
+
+  /* Scroll reveal */
+  .scroll-reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    filter: blur(4px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+                filter 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .scroll-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+
+  .scroll-reveal-delay-1 { transition-delay: 0.08s; }
+  .scroll-reveal-delay-2 { transition-delay: 0.16s; }
+  .scroll-reveal-delay-3 { transition-delay: 0.24s; }
+  .scroll-reveal-delay-4 { transition-delay: 0.32s; }
+  .scroll-reveal-delay-5 { transition-delay: 0.40s; }
 
   .gallery-item {
     @apply overflow-hidden rounded-xl;
