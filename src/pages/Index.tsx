@@ -91,7 +91,7 @@ const Index = () => {
               href="https://wa.me/5500000000000?text=Olá! Quero participar do evento de pré-lançamento da Rarity Chalés!"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-accent inline-block text-sm"
+              className="btn-green inline-block text-sm"
             >
               Quero Participar
             </a>
