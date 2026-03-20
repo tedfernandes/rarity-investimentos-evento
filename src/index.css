@@ -162,25 +162,31 @@
   }
 
   .shimmer-border {
-    border-image: linear-gradient(
-      90deg,
-      hsl(220 6% 58%) 0%,
-      hsl(220 6% 78%) 40%,
-      hsl(0 0% 100%) 50%,
-      hsl(220 6% 78%) 60%,
-      hsl(220 6% 58%) 100%
-    ) 1;
-    background-size: 200% 100%;
-    animation: shimmer-border 3s ease-in-out infinite;
-    border-width: 1px;
-    border-style: solid;
-    border-image-slice: 1;
+    position: relative;
+    border: none !important;
   }
 
-  @keyframes shimmer-border {
-    0% { border-image-source: linear-gradient(90deg, hsl(220 6% 38%) 0%, hsl(220 6% 58%) 40%, hsl(0 0% 100%) 50%, hsl(220 6% 58%) 60%, hsl(220 6% 38%) 100%); }
-    50% { border-image-source: linear-gradient(90deg, hsl(0 0% 100%) 0%, hsl(220 6% 38%) 40%, hsl(220 6% 58%) 50%, hsl(220 6% 38%) 60%, hsl(0 0% 100%) 100%); }
-    100% { border-image-source: linear-gradient(90deg, hsl(220 6% 38%) 0%, hsl(220 6% 58%) 40%, hsl(0 0% 100%) 50%, hsl(220 6% 58%) 60%, hsl(220 6% 38%) 100%); }
+  .shimmer-border::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(
+      90deg,
+      hsl(220 6% 38%) 0%,
+      hsl(220 6% 58%) 40%,
+      hsl(0 0% 100%) 50%,
+      hsl(220 6% 58%) 60%,
+      hsl(220 6% 38%) 100%
+    );
+    background-size: 200% 100%;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    animation: shimmer 3s ease-in-out infinite;
+    pointer-events: none;
   }
 
   .section-alt {
