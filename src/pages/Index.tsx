@@ -105,7 +105,7 @@ const Index = () => {
 
       {/* ===== GALLERY — alt background ===== */}
       <section className="section-alt py-14 md:py-20">
-        <div className="container mx-auto px-8 sm:px-12 lg:px-24 fade-in fade-in-delay-3">
+        <div className="container mx-auto px-5 sm:px-6 lg:px-12 fade-in fade-in-delay-3">
           <div className="text-center mb-8">
             <h2 className="text-2xl md:text-3xl font-bold uppercase tracking-wider" style={{ color: "#000000" }}>
               PRIMEIRA EXPANSÃO
@@ -141,7 +141,7 @@ const Index = () => {
               </div>
               <div className="text-center sm:text-left flex-1">
                 <h3 className="text-2xl md:text-3xl font-bold mb-1">
-                  Victor <span className="text-accent">Alfenas</span>
+                  <span className="glow-accent">Victor Alfenas</span>
                 </h3>
                 <p className="text-xs text-accent uppercase tracking-wider mb-3">CEO da Rarity Chalés</p>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-4">
@@ -159,7 +159,7 @@ const Index = () => {
             </div>
 
             {/* Video */}
-            <div className="rounded-2xl overflow-hidden aspect-square shimmer-border relative">
+            <div className="rounded-2xl overflow-hidden aspect-square relative" style={{ border: "1px solid #d3d3d3" }}>
               <video
                 src={rarityVideo}
                 autoPlay
