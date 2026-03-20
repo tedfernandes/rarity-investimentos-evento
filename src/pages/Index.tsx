@@ -107,12 +107,12 @@ const Index = () => {
       <section className="section-alt py-14 md:py-20">
         <div className="container mx-auto px-5 sm:px-6 lg:px-12 fade-in fade-in-delay-3">
           <div className="text-center mb-8">
+            <span className="inline-block px-3 py-1 rounded-full text-xs font-medium tracking-widest uppercase border border-black/20 bg-black/5 text-black/70 mb-3">
+              Unidades Entregues
+            </span>
             <h2 className="text-2xl md:text-3xl font-bold uppercase tracking-wider" style={{ color: "#000000" }}>
               PRIMEIRA EXPANSÃO
             </h2>
-            <span className="inline-block px-3 py-1 rounded-full text-xs font-medium tracking-widest uppercase border border-black/20 bg-black/5 text-black/70 mt-3">
-              Unidades Entregues
-            </span>
             <p className="text-sm text-black/60 mt-2">
               Primeira expansão, da unidade Ouro Preto, foi um sucesso
             </p>
