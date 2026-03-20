@@ -85,9 +85,11 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Gradient transition from hero to event */}
+      <div className="h-24 md:h-32 bg-gradient-to-b from-black to-background" />
 
       {/* ===== EVENT — default background ===== */}
-      <section className="py-14 md:py-20">
+      <section className="pt-0 pb-14 md:pb-20">
         <div className="container mx-auto px-5 sm:px-6 lg:px-8 fade-in fade-in-delay-2">
           <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">
             O que teremos no <span className="text-accent">evento</span>
