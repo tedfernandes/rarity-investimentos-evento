@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rarity Chalés - Pré-lançamento da Expansão</title>
+  <meta name="description" content="Evento exclusivo de pré-lançamento da Expansão Rarity Chalés. Participe ao vivo com o CEO Victor Alfenas." />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: hsl(220 20% 7%);
+      --fg: hsl(220 10% 92%);
+      --card: hsl(220 18% 10%);
+      --border: hsl(220 15% 18%);
+      --muted: hsl(220 10% 50%);
+      --secondary: hsl(220 15% 15%);
+      --accent: hsl(150 60% 42%);
+      --accent-light: hsl(150 65% 55%);
+      --gradient-green: linear-gradient(135deg, hsl(150 60% 42%), hsl(150 65% 55%));
+      --shadow-green: 0 4px 30px hsl(150 60% 42% / 0.2);
+      --shadow-card: 0 8px 32px hsl(0 0% 0% / 0.3);
+      --radius: 0.75rem;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', sans-serif; }
+
+    a { text-decoration: none; color: inherit; }
+    img { display: block; max-width: 100%; }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+    }
+    @media (min-width: 640px) {
+      .container { padding-left: 1.5rem; padding-right: 1.5rem; }
+    }
+    @media (min-width: 1024px) {
+      .container { padding-left: 2rem; padding-right: 2rem; }
+    }
+
+    /* Utility */
+    .highlight-text { color: var(--accent); }
+    .text-muted { color: var(--muted); }
+    .text-fg-70 { color: hsl(220 10% 92% / 0.7); }
+    .text-fg-80 { color: hsl(220 10% 92% / 0.8); }
+    .text-fg-90 { color: hsl(220 10% 92% / 0.9); }
+    .text-center { text-align: center; }
+    .font-bold { font-weight: 700; }
+    .font-semibold { font-weight: 600; }
+    .uppercase { text-transform: uppercase; }
+    .tracking-wider { letter-spacing: 0.05em; }
+
+    /* Glass card */
+    .glass-card {
+      background: hsl(220 18% 10% / 0.6);
+      border: 1px solid hsl(220 15% 18% / 0.5);
+      border-radius: var(--radius);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      box-shadow: var(--shadow-card);
+    }
+
+    /* Buttons */
+    .btn-green {
+      display: inline-block;
+      position: relative;
+      overflow: hidden;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 1rem 2rem;
+      border-radius: var(--radius);
+      color: #fff;
+      background: var(--gradient-green);
+      box-shadow: var(--shadow-green);
+      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      border: none;
+      cursor: pointer;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
+    }
+    .btn-green:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 40px hsl(150 60% 42% / 0.35);
+    }
+    .btn-green:active { transform: translateY(0); }
+
+    /* Section divider */
+    .section-divider {
+      width: 5rem;
+      height: 2px;
+      margin: 1.5rem auto;
+      background: var(--gradient-green);
+    }
+
+    /* Scroll reveal */
+    .scroll-reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                  transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .scroll-reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      will-change: transform;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, hsl(220 20% 7% / 0.8), hsl(220 20% 7% / 0.6), var(--bg));
+    }
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      padding: 5rem 0;
+      max-width: 48rem;
+    }
+    .hero-badge {
+      display: inline-block;
+      padding: 0.375rem 1rem;
+      border-radius: 9999px;
+      border: 1px solid hsl(150 60% 42% / 0.3);
+      background: hsl(150 60% 42% / 0.1);
+      margin-bottom: 1.5rem;
+    }
+    .hero-badge span {
+      color: var(--accent);
+      font-size: 0.875rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .hero h1 {
+      font-size: clamp(1.875rem, 5vw, 3.75rem);
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+    }
+    .hero p.subtitle {
+      color: hsl(220 10% 92% / 0.7);
+      font-size: clamp(1.125rem, 2vw, 1.25rem);
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+    .hero-checks {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+    .hero-check {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .hero-check svg { width: 1.25rem; height: 1.25rem; color: var(--accent); fill: var(--accent); }
+    .hero-check span { color: hsl(220 10% 92% / 0.8); font-size: 0.875rem; }
+
+    /* ===== STATS ===== */
+    .stats-section { padding: 4rem 0; }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    @media (min-width: 768px) {
+      .stats-grid { grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    }
+    .stat-item { text-align: center; }
+    .stat-value {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+    .stat-label { color: var(--muted); font-size: 0.875rem; }
+
+    /* ===== EVENT ===== */
+    .event-section { padding: 5rem 0 5rem; }
+    .event-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      max-width: 56rem;
+      margin: 0 auto;
+    }
+    @media (min-width: 640px) {
+      .event-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    .event-card { padding: 1.5rem; }
+    .check-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      color: hsl(220 10% 92% / 0.9);
+      transition: transform 0.3s ease;
+    }
+    .check-item:hover { transform: translateX(4px); }
+    .check-item .icon { font-size: 1.5rem; flex-shrink: 0; margin-top: 0.125rem; }
+    .check-item p { line-height: 1.6; }
+
+    /* ===== GALLERY ===== */
+    .gallery-section { padding: 5rem 0; }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+    @media (min-width: 640px) {
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 1024px) {
+      .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    .gallery-item {
+      overflow: hidden;
+      border-radius: var(--radius);
+      aspect-ratio: 1;
+      transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .gallery-item:hover { transform: scale(1.03); }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .gallery-item:hover img { transform: scale(1.1); }
+
+    /* ===== ABOUT ===== */
+    .about-section { padding: 5rem 0; }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      align-items: center;
+      max-width: 72rem;
+      margin: 0 auto;
+    }
+    @media (min-width: 1024px) {
+      .about-grid { grid-template-columns: 2fr 3fr; }
+    }
+    .portrait-wrap { display: flex; justify-content: center; }
+    .portrait-container { position: relative; }
+    .portrait {
+      width: 16rem;
+      height: 20rem;
+      border-radius: 1rem;
+      overflow: hidden;
+      border: 2px solid hsl(150 60% 42% / 0.2);
+    }
+    @media (min-width: 768px) {
+      .portrait { width: 18rem; height: 24rem; }
+    }
+    .portrait img { width: 100%; height: 100%; object-fit: cover; }
+    .portrait-shadow {
+      position: absolute;
+      bottom: -1rem;
+      right: -1rem;
+      width: 16rem;
+      height: 20rem;
+      border-radius: 1rem;
+      border: 1px solid hsl(150 60% 42% / 0.1);
+      z-index: -1;
+    }
+    @media (min-width: 768px) {
+      .portrait-shadow { width: 18rem; height: 24rem; }
+    }
+    .about-text { line-height: 1.7; }
+    .about-text h2 { font-size: clamp(1.875rem, 3vw, 2.25rem); margin-bottom: 1.5rem; }
+    .about-role {
+      font-size: 0.875rem;
+      color: var(--accent);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+    .about-text p { color: hsl(220 10% 92% / 0.75); margin-bottom: 1rem; }
+    .about-text strong { color: var(--fg); }
+    .about-text .accent-strong { color: var(--accent); }
+
+    /* ===== CTA ===== */
+    .cta-section { padding: 5rem 0; }
+    .cta-card {
+      max-width: 40rem;
+      margin: 0 auto;
+      padding: 2.5rem;
+    }
+    @media (min-width: 768px) {
+      .cta-card { padding: 4rem; }
+    }
+    .cta-card h2 { font-size: clamp(1.875rem, 3vw, 2.25rem); margin-bottom: 1rem; }
+    .cta-card p { color: var(--muted); font-size: 1.125rem; margin-bottom: 2rem; }
+
+    /* ===== FOOTER ===== */
+    .site-footer {
+      padding: 2rem 0;
+      border-top: 1px solid hsl(220 15% 18% / 0.3);
+      text-align: center;
+    }
+    .site-footer .brand { color: var(--accent); font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem; }
+    .site-footer .copy { color: var(--muted); font-size: 0.875rem; }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg" id="parallaxBg" style="background-image: url('https://images.unsplash.com/photo-1587061949409-02df41d5e562?auto=format&fit=crop&w=1920&q=80');"></div>
+    <div class="hero-overlay"></div>
+    <div class="container">
+      <div class="hero-content scroll-reveal">
+        <div class="hero-badge"><span>Evento Exclusivo</span></div>
+        <h1>Pré-lançamento da <span class="highlight-text">Expansão Rarity</span> Chalés</h1>
+        <p class="subtitle">
+          Evento ao vivo com o CEO <strong style="color: var(--fg);">Victor Alfenas</strong>.
+          Venha participar e saiba todos os detalhes de como ser sócio nesse
+          empreendimento e fazer parte deste sucesso.
+        </p>
+        <div class="hero-checks">
+          <div class="hero-check">
+            <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+            <span>100% Gratuito</span>
+          </div>
+          <div class="hero-check">
+            <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+            <span>Online e Ao Vivo</span>
+          </div>
+        </div>
+        <a href="https://wa.me/5500000000000?text=Olá! Quero participar do evento de pré-lançamento da Rarity Chalés!" target="_blank" rel="noopener noreferrer" class="btn-green">Quero Participar</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STATS ===== -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="glass-card scroll-reveal" style="padding: 2rem 3rem;">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-value">R$<span class="counter" data-target="20">0</span>M+</div>
+            <p class="stat-label">Em negócios administrados</p>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value"><span class="counter" data-target="6">0</span>+</div>
+            <p class="stat-label">Unidades entregues</p>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value"><span class="counter" data-target="100">0</span>%</div>
+            <p class="stat-label">De satisfação</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EVENT ===== -->
+  <section class="event-section" id="evento">
+    <div class="container">
+      <div class="text-center scroll-reveal" style="margin-bottom: 4rem;">
+        <h2 style="font-size: clamp(1.875rem, 4vw, 3rem); font-weight: 700; margin-bottom: 1rem;">
+          O que teremos neste <span class="highlight-text">evento?</span>
+        </h2>
+        <div class="section-divider"></div>
+        <p class="text-muted" style="font-size: 1.125rem; max-width: 40rem; margin: 0 auto;">
+          Uma oportunidade única de conhecer todos os detalhes do empreendimento
+        </p>
+      </div>
+      <div class="event-grid">
+        <div class="glass-card event-card scroll-reveal" style="transition-delay: 0s;">
+          <div class="check-item"><span class="icon">📊</span><p>Informações relevantes sobre o investimento aos futuros sócios</p></div>
+        </div>
+        <div class="glass-card event-card scroll-reveal" style="transition-delay: 0.1s;">
+          <div class="check-item"><span class="icon">🚁</span><p>Imagens de drone ao vivo dos chalés, direto da unidade de Ouro Preto</p></div>
+        </div>
+        <div class="glass-card event-card scroll-reveal" style="transition-delay: 0.2s;">
+          <div class="check-item"><span class="icon">👤</span><p>Contato direto com o CEO da Rarity Chalés</p></div>
+        </div>
+        <div class="glass-card event-card scroll-reveal" style="transition-delay: 0.3s;">
+          <div class="check-item"><span class="icon">🏷️</span><p>Condições exclusivas para aquisição na live</p></div>
+        </div>
+      </div>
+      <div class="text-center scroll-reveal" style="margin-top: 3rem;">
+        <p class="text-muted" style="margin-bottom: 1.5rem;">
+          Não perca tempo, pois é uma <strong class="highlight-text">oportunidade limitada</strong>.
+        </p>
+        <a href="#hero" class="btn-green">Quero Participar</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALLERY ===== -->
+  <section class="gallery-section" id="galeria">
+    <div class="container">
+      <div class="text-center scroll-reveal" style="margin-bottom: 4rem;">
+        <h2 style="font-size: clamp(1.875rem, 4vw, 3rem); font-weight: 700; margin-bottom: 1rem;">
+          Unidades <span class="highlight-text">Entregues</span>
+        </h2>
+        <div class="section-divider"></div>
+        <p class="text-muted" style="font-size: 1.125rem; max-width: 32rem; margin: 0 auto;">
+          Conheça os chalés que já foram entregues com excelência
+        </p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item scroll-reveal" style="transition-delay: 0s;">
+          <img src="SUBSTITUA_IMAGEM_CHALE_1" alt="Chalé com casal e deck" loading="lazy" />
+        </div>
+        <div class="gallery-item scroll-reveal" style="transition-delay: 0.1s;">
+          <img src="SUBSTITUA_IMAGEM_CHALE_2" alt="Chalé A-frame com montanhas" loading="lazy" />
+        </div>
+        <div class="gallery-item scroll-reveal" style="transition-delay: 0.15s;">
+          <img src="SUBSTITUA_IMAGEM_CHALE_3" alt="Chalé moderno elevado" loading="lazy" />
+        </div>
+        <div class="gallery-item scroll-reveal" style="transition-delay: 0.2s;">
+          <img src="SUBSTITUA_IMAGEM_CHALE_4" alt="Chalé com heliponto" loading="lazy" />
+        </div>
+        <div class="gallery-item scroll-reveal" style="transition-delay: 0.25s;">
+          <img src="SUBSTITUA_IMAGEM_CHALE_5" alt="Chalé com varanda e piscina" loading="lazy" />
+        </div>
+        <div class="gallery-item scroll-reveal" style="transition-delay: 0.3s;">
+          <img src="SUBSTITUA_IMAGEM_CHALE_6" alt="Chalé geodésico panorâmico" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="about-section" id="sobre">
+    <div class="container">
+      <div class="about-grid">
+        <div class="portrait-wrap scroll-reveal">
+          <div class="portrait-container">
+            <div class="portrait">
+              <img src="SUBSTITUA_IMAGEM_CEO" alt="Victor Alfenas - CEO Rarity Chalés" loading="lazy" />
+            </div>
+            <div class="portrait-shadow"></div>
+          </div>
+        </div>
+        <div class="about-text scroll-reveal" style="transition-delay: 0.2s;">
+          <h2>Victor <span class="highlight-text">Alfenas</span></h2>
+          <p class="about-role">CEO da Rarity Chalés</p>
+          <p>
+            Durante anos, vivi preso em vícios, distrações e ciclos de autossabotagem.
+            Mesmo tendo potencial, não conseguia sair do lugar — até que descobri uma
+            verdade simples: ninguém vence sem clareza, disciplina e ação.
+          </p>
+          <p>
+            Foi quando desenvolvi o que hoje se tornou o
+            <strong>Método ALFA</strong> — uma metodologia que
+            me ajudou a reprogramar minha mente, vencer os bloqueios e finalmente construir
+            uma vida com propósito, prosperidade e direção.
+          </p>
+          <p>
+            Hoje, sou empresário, mentor e pai de família. Já administrei mais de
+            <strong class="accent-strong">R$20 milhões em negócios</strong>, mas o que
+            mais me orgulha é ter vencido minhas batalhas internas e ajudado outros a
+            fazerem o mesmo. Se você sente que está travado, essa jornada é pra você. Eu
+            sei o caminho — e vou caminhar com você.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta-section" id="contato">
+    <div class="container">
+      <div class="glass-card cta-card text-center scroll-reveal">
+        <h2>Ficou com alguma <span class="highlight-text">dúvida?</span></h2>
+        <div class="section-divider"></div>
+        <p>Clique no botão abaixo e fale com o nosso time agora mesmo</p>
+        <a href="https://wa.me/5500000000000?text=Olá! Tenho dúvidas sobre o pré-lançamento da expansão Rarity Chalés." target="_blank" rel="noopener noreferrer" class="btn-green">Falar com o Time</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="brand">Rarity Chalés</p>
+      <p class="copy">&copy; 2025 Rarity Chalés. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll reveal with Intersection Observer
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+    document.querySelectorAll('.scroll-reveal').forEach(el => revealObserver.observe(el));
+
+    // Animated counters
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const target = parseInt(el.dataset.target);
+          const duration = 2000;
+          const start = performance.now();
+          const animate = (now) => {
+            const progress = Math.min((now - start) / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            el.textContent = Math.floor(eased * target);
+            if (progress < 1) requestAnimationFrame(animate);
+            else el.textContent = target;
+          };
+          requestAnimationFrame(animate);
+          counterObserver.unobserve(el);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('.counter').forEach(el => counterObserver.observe(el));
+
+    // Subtle parallax on hero background
+    window.addEventListener('scroll', () => {
+      const bg = document.getElementById('parallaxBg');
+      if (bg) {
+        const scroll = window.pageYOffset;
+        bg.style.transform = 'translateY(' + (scroll * 0.3) + 'px)';
+      }
+    }, { passive: true });
+  </script>
+
+</body>
+</html>
