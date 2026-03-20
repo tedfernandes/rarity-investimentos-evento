@@ -136,7 +136,7 @@ const Index = () => {
           <div className="max-w-5xl mx-auto grid md:grid-cols-[3fr_1fr] gap-6 items-stretch">
             {/* Bio Card */}
             <div className="flex flex-col sm:flex-row items-center gap-6 p-6 md:p-8 rounded-2xl bg-card border border-border" style={{ boxShadow: "var(--shadow-card)" }}>
-              <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-2xl overflow-hidden shrink-0 border-2 border-accent/20">
+              <div className="w-36 h-36 sm:w-48 sm:h-48 rounded-2xl overflow-hidden shrink-0 border-2 border-accent/20">
                 <img src={ceoPortrait} alt="Victor Alfenas" className="w-full h-full object-cover" />
               </div>
               <div className="text-center sm:text-left flex-1">
