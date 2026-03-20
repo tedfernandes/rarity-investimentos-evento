@@ -130,7 +130,7 @@ const Index = () => {
                 <img src={img.src} alt={img.alt} className={`w-full h-full object-cover ${img.alt === "Iglu Tower" ? "object-[30%_25%] sm:object-[center_25%]" : "object-[30%_center] sm:object-center"}`} loading="lazy" />
                 {img.badge && (
                   <div className="absolute top-0 right-0 overflow-hidden" style={{ width: "120px", height: "120px" }}>
-                    <div className="absolute bg-red-600 text-white text-[8px] sm:text-[7px] font-bold uppercase tracking-wider shadow-md" style={{ top: "24px", right: "-34px", transform: "rotate(45deg)", width: "170px", height: "22px" }}>
+                    <div className="absolute bg-red-600 text-white text-[8px] sm:text-[9px] font-bold uppercase tracking-wider shadow-md" style={{ top: "24px", right: "-34px", transform: "rotate(45deg)", width: "170px", height: "22px" }}>
                       <span className="absolute inset-0 flex items-center justify-center leading-none whitespace-nowrap" style={{ paddingLeft: "18px" }}>
                         {img.badge}
                       </span>
