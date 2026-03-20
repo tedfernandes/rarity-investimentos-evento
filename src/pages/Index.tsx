@@ -122,7 +122,7 @@ const Index = () => {
               <div key={i} className="gallery-item aspect-square relative">
                 <img src={img.src} alt={img.alt} className="w-full h-full object-cover" loading="lazy" />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3">
-                  <p className="text-white text-xs sm:text-sm font-medium">{img.name}</p>
+                  <p className="text-white text-sm sm:text-base md:text-lg font-medium">{img.name}</p>
                 </div>
               </div>
             ))}
