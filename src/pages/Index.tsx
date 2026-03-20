@@ -142,7 +142,7 @@ const Index = () => {
               </h3>
               <p className="text-xs text-accent uppercase tracking-wider mb-3">CEO da Rarity Chalés</p>
               <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                Empresário, mentor e pai de família. Já administrou mais de <strong className="text-accent">R$20 milhões em negócios</strong>. Venha conhecer a oportunidade.
+                Empresário, mentor e pai de família. Já administrou mais de <strong className="text-accent">R$20 milhões em obras próprias</strong>, sendo mais de 20 unidades entre prédios, casas de alto padrão e chalés de luxo. Venha conhecer a oportunidade.
               </p>
               <a
                 href="https://wa.me/5500000000000?text=Olá! Quero participar do evento de pré-lançamento da Rarity Chalés!"
