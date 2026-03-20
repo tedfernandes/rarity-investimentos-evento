@@ -129,9 +129,9 @@ const Index = () => {
               <div key={i} className="scroll-reveal gallery-item aspect-square relative rounded-xl overflow-hidden" style={{ transitionDelay: `${i * 0.08}s` }}>
                 <img src={img.src} alt={img.alt} className="w-full h-full object-cover" loading="lazy" style={img.alt === "Iglu Tower" ? { objectPosition: "center 25%" } : undefined} />
                 {img.badge && (
-                  <div className="absolute top-0 right-0 overflow-hidden" style={{ width: "180px", height: "180px" }}>
-                    <div className="absolute bg-red-600 text-white text-[10px] font-bold uppercase tracking-wider shadow-md" style={{ top: "38px", right: "-48px", transform: "rotate(45deg)", width: "240px", height: "26px" }}>
-                      <span className="absolute inset-0 flex items-center justify-center leading-none whitespace-nowrap" style={{ paddingLeft: "25px" }}>
+                  <div className="absolute top-0 right-0 overflow-hidden" style={{ width: "120px", height: "120px" }}>
+                    <div className="absolute bg-red-600 text-white text-[8px] sm:text-[10px] font-bold uppercase tracking-wider shadow-md" style={{ top: "24px", right: "-34px", transform: "rotate(45deg)", width: "170px", height: "22px" }}>
+                      <span className="absolute inset-0 flex items-center justify-center leading-none whitespace-nowrap" style={{ paddingLeft: "18px" }}>
                         {img.badge}
                       </span>
                     </div>
