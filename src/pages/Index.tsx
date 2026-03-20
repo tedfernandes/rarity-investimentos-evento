@@ -141,7 +141,7 @@ const Index = () => {
               </div>
               <div className="text-center sm:text-left flex-1">
                 <h3 className="text-2xl md:text-3xl font-bold mb-1">
-                  Victor <span className="text-accent">Alfenas</span>
+                  <span className="glow-accent">Victor Alfenas</span>
                 </h3>
                 <p className="text-xs text-accent uppercase tracking-wider mb-3">CEO da Rarity Chalés</p>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-4">
