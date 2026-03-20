@@ -35,14 +35,14 @@ const Index = () => {
     <main className="min-h-screen">
 
       {/* ===== HERO — full viewport, immersive ===== */}
-      <section className="relative min-h-[85vh] sm:min-h-screen flex items-center overflow-hidden">
+      <section className="relative min-h-[85vh] sm:min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img src={heroBg} alt="" className="w-full h-full object-cover object-[center_15%]" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/50 to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-t from-[hsl(0_0%_6%)] via-black/40 to-transparent" />
         </div>
 
-        <div className="relative z-10 container mx-auto px-3 sm:px-6 lg:px-8 py-20 md:py-32">
+        <div className="relative z-10 container mx-auto px-3 sm:px-6 lg:px-8">
           <div className="max-w-2xl fade-in text-center sm:text-left mx-auto sm:mx-0">
             <img src={logoRarity} alt="Rarity Chalés" className="w-40 sm:w-48 mb-2 mx-auto sm:mx-0 invert" style={{ marginLeft: "-20px" }} />
             <div style={{ marginTop: "-50px" }}>
