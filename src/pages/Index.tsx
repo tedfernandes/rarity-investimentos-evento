@@ -38,7 +38,7 @@ const Index = () => {
         <div className="absolute inset-0">
           <img src={heroBg} alt="" className="w-full h-full object-cover object-[center_20%]" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/50 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[hsl(0_0%_6%)] via-black/40 to-transparent" />
         </div>
 
         <div className="relative z-10 container mx-auto px-3 sm:px-6 lg:px-8 py-20 md:py-32">
@@ -85,11 +85,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Gradient transition from hero to event */}
-      <div className="h-24 md:h-32 bg-gradient-to-b from-black to-background" />
-
       {/* ===== EVENT — default background ===== */}
-      <section className="pt-0 pb-14 md:pb-20">
+      <section className="py-14 md:py-20">
         <div className="container mx-auto px-5 sm:px-6 lg:px-8 fade-in fade-in-delay-2">
           <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">
             O que teremos no <span className="text-accent">evento</span>
