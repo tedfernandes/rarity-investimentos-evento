@@ -19,7 +19,7 @@ const galleryImages = [
 
 const highlights = [
   { icon: "📊", text: "Informações sobre o investimento aos futuros sócios" },
-  { icon: "🚁", text: "Imagens de drone ao vivo dos chalés" },
+  { icon: "🚁", text: "Imagens de drone ao vivo do complexo de chalés da unidade Ouro Preto" },
   { icon: "👤", text: "Contato direto com o CEO da Rarity Chalés, Victor Alfenas" },
   { icon: "🏷️", text: "Condições exclusivas para novos sócios somente na live" },
 ];
