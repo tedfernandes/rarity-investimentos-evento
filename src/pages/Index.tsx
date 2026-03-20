@@ -44,7 +44,7 @@ const Index = () => {
             <span className="inline-block px-3 py-1 rounded-full text-xs font-medium tracking-widest uppercase border border-white/20 bg-white/10 text-white/80 mb-5 backdrop-blur-sm">
               Evento Exclusivo
             </span>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-[1.05] mb-5 text-white" style={{ textWrap: "balance" }}>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-[1.05] mb-5 text-white" style={{ textWrap: "balance" }}>
               Pré-lançamento da{" "}
               <span className="glow-accent">Expansão Rarity Chalés</span>{" "}
               para outro estado
