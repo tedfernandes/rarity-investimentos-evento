@@ -15,7 +15,7 @@ const galleryImages = [
   { src: chalet3, alt: "Scandinavian", name: "Scandinavian" },
   { src: chalet4, alt: "Double A-Frame", name: "Double A-Frame" },
   { src: chalet5, alt: "Cabana Linear", name: "Cabana Linear" },
-  { src: chalet6, alt: "Iglu Tower", name: "Iglu Tower" },
+  { src: chalet6, alt: "Iglu Tower", name: "Iglu Tower", subtitle: "(Em fase final de obra)" },
 ];
 
 const highlights = [
