@@ -124,7 +124,7 @@ const Index = () => {
                 {img.badge && (
                   <div className="absolute top-0 right-0 overflow-hidden" style={{ width: "180px", height: "180px" }}>
                     <div className="absolute bg-red-600 text-white text-[10px] font-bold uppercase tracking-wider shadow-md" style={{ top: "38px", right: "-48px", transform: "rotate(45deg)", width: "240px", height: "26px" }}>
-                      <span className="absolute inset-0 flex items-center justify-center leading-none whitespace-nowrap" style={{ paddingLeft: "20px" }}>
+                      <span className="absolute inset-0 flex items-center justify-center leading-none whitespace-nowrap" style={{ paddingLeft: "25px" }}>
                         {img.badge}
                       </span>
                     </div>
