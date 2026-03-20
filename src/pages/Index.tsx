@@ -41,7 +41,7 @@ const Index = () => {
       {/* ===== HERO — full viewport, immersive ===== */}
       <section className="relative min-h-[85vh] sm:min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src={heroBg} alt="" className="w-full h-full object-cover object-[center_40%] sm:object-[center_20%]" />
+          <img src={heroBg} alt="" className="w-full h-full object-cover object-[center_30%] sm:object-[center_15%]" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/50 to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-t from-[hsl(0_0%_6%)] via-black/40 to-transparent" />
         </div>
