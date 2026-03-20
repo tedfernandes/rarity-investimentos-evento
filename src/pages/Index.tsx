@@ -169,7 +169,7 @@ const Index = () => {
                 className="w-full h-full object-cover"
               />
               <div className="absolute bottom-0 left-0 right-0 bg-black/30 backdrop-blur-sm px-3 py-2 text-center">
-                <p className="text-white font-medium" style={{ fontSize: "16px" }}>Primeira Expansão, unidade Ouro Preto</p>
+                <p className="text-white font-medium" style={{ fontSize: "11px" }}>Primeira Expansão, unidade Ouro Preto</p>
               </div>
             </div>
           </div>
