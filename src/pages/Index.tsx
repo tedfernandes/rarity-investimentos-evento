@@ -159,7 +159,7 @@ const Index = () => {
             </div>
 
             {/* Video */}
-            <div className="rounded-2xl overflow-hidden aspect-square shimmer-border relative">
+            <div className="rounded-2xl overflow-hidden aspect-square relative" style={{ border: "1px solid #d3d3d3" }}>
               <video
                 src={rarityVideo}
                 autoPlay
