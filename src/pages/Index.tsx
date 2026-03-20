@@ -133,26 +133,41 @@ const Index = () => {
       {/* ===== CEO + CTA — default background ===== */}
       <section className="py-14 md:py-20">
         <div className="container mx-auto px-5 sm:px-6 lg:px-8 fade-in fade-in-delay-4">
-          <div className="max-w-3xl mx-auto flex flex-col sm:flex-row items-center gap-6 p-6 md:p-8 rounded-2xl bg-card border border-border" style={{ boxShadow: "var(--shadow-card)" }}>
-            <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-2xl overflow-hidden shrink-0 border-2 border-accent/20">
-              <img src={ceoPortrait} alt="Victor Alfenas" className="w-full h-full object-cover" />
+          <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6 items-stretch">
+            {/* Bio Card */}
+            <div className="flex flex-col sm:flex-row items-center gap-6 p-6 md:p-8 rounded-2xl bg-card border border-border" style={{ boxShadow: "var(--shadow-card)" }}>
+              <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-2xl overflow-hidden shrink-0 border-2 border-accent/20">
+                <img src={ceoPortrait} alt="Victor Alfenas" className="w-full h-full object-cover" />
+              </div>
+              <div className="text-center sm:text-left flex-1">
+                <h3 className="text-xl font-bold mb-1">
+                  Victor <span className="text-accent">Alfenas</span>
+                </h3>
+                <p className="text-xs text-accent uppercase tracking-wider mb-3">CEO da Rarity Chalés</p>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                  Empresário, mentor e pai de família. Já administrou mais de <strong className="text-accent">R$20 milhões em obras próprias</strong>, sendo mais de 20 unidades entre prédios, casas de alto padrão e chalés de luxo. Venha conhecer a oportunidade.
+                </p>
+                <a
+                  href="https://wa.me/5500000000000?text=Olá! Quero participar do evento de pré-lançamento da Rarity Chalés!"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-accent inline-block text-xs py-3 px-6"
+                >
+                  Garantir Minha Vaga
+                </a>
+              </div>
             </div>
-            <div className="text-center sm:text-left flex-1">
-              <h3 className="text-xl font-bold mb-1">
-                Victor <span className="text-accent">Alfenas</span>
-              </h3>
-              <p className="text-xs text-accent uppercase tracking-wider mb-3">CEO da Rarity Chalés</p>
-              <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                Empresário, mentor e pai de família. Já administrou mais de <strong className="text-accent">R$20 milhões em obras próprias</strong>, sendo mais de 20 unidades entre prédios, casas de alto padrão e chalés de luxo. Venha conhecer a oportunidade.
-              </p>
-              <a
-                href="https://wa.me/5500000000000?text=Olá! Quero participar do evento de pré-lançamento da Rarity Chalés!"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-accent inline-block text-xs py-3 px-6"
-              >
-                Garantir Minha Vaga
-              </a>
+
+            {/* Video */}
+            <div className="rounded-2xl overflow-hidden border border-border">
+              <video
+                src={rarityVideo}
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
