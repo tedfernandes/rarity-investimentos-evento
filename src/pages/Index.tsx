@@ -43,7 +43,7 @@ const Index = () => {
       {/* Theme toggle */}
       <button
         onClick={() => setDark(!dark)}
-        className="fixed top-4 right-4 z-50 p-2.5 rounded-full bg-card border border-border shadow-md hover:scale-110 transition-transform"
+        className="fixed top-4 right-4 z-50 p-2.5 rounded-full bg-card border border-border shadow-md hover:scale-105 active:scale-95 transition-transform"
         aria-label="Alternar tema"
       >
         {dark ? (
@@ -57,32 +57,32 @@ const Index = () => {
         )}
       </button>
 
-      {/* HERO */}
-      <section className="relative overflow-hidden">
+      {/* ===== HERO — full viewport, immersive ===== */}
+      <section className="relative min-h-screen flex items-end overflow-hidden">
         <div className="absolute inset-0">
           <img src={heroBg} alt="" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/80 to-background" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
         </div>
 
-        <div className="relative z-10 container mx-auto px-5 sm:px-6 lg:px-8 pt-20 pb-16 md:pt-28 md:pb-20">
+        <div className="relative z-10 container mx-auto px-5 sm:px-6 lg:px-8 pb-16 md:pb-24 pt-32">
           <div className="max-w-2xl fade-in">
-            <span className="inline-block px-3 py-1 rounded-full text-xs font-medium tracking-wider uppercase border border-accent/30 bg-accent/10 text-accent mb-5">
+            <span className="inline-block px-3 py-1 rounded-full text-xs font-medium tracking-widest uppercase border border-white/20 bg-white/10 text-white/80 mb-5 backdrop-blur-sm">
               Evento Exclusivo
             </span>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-5">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-[1.05] mb-5 text-white" style={{ textWrap: "balance" }}>
               Pré-lançamento da{" "}
               <span className="text-accent">Expansão Rarity</span> Chalés
             </h1>
-            <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-6">
-              Evento ao vivo com o CEO <strong className="text-foreground">Victor Alfenas</strong>.
+            <p className="text-white/70 text-base md:text-lg leading-relaxed mb-8 max-w-lg">
+              Evento ao vivo com o CEO <strong className="text-white">Victor Alfenas</strong>.
               Saiba como ser sócio neste empreendimento de sucesso.
             </p>
-            <div className="flex flex-wrap gap-4 mb-8">
-              <span className="flex items-center gap-1.5 text-sm text-muted-foreground">
+            <div className="flex flex-wrap gap-5 mb-10">
+              <span className="flex items-center gap-2 text-sm text-white/60">
                 <svg className="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/></svg>
                 100% Gratuito
               </span>
-              <span className="flex items-center gap-1.5 text-sm text-muted-foreground">
+              <span className="flex items-center gap-2 text-sm text-white/60">
                 <svg className="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/></svg>
                 Online e Ao Vivo
               </span>
@@ -91,7 +91,7 @@ const Index = () => {
               href="https://wa.me/5500000000000?text=Olá! Quero participar do evento de pré-lançamento da Rarity Chalés!"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-green inline-block text-sm"
+              className="btn-accent inline-block text-sm"
             >
               Quero Participar
             </a>
@@ -99,25 +99,28 @@ const Index = () => {
         </div>
       </section>
 
-      {/* CONTENT SECTION */}
-      <section className="container mx-auto px-5 sm:px-6 lg:px-8 py-16 md:py-20">
-        {/* Stats row */}
-        <div className="grid grid-cols-3 gap-4 mb-16 fade-in fade-in-delay-1">
-          {[
-            { val: "R$20M+", label: "Em negócios" },
-            { val: "6+", label: "Unidades entregues" },
-            { val: "100%", label: "Satisfação" },
-          ].map((s, i) => (
-            <div key={i} className="text-center p-4 rounded-xl bg-card border border-border" style={{ boxShadow: "var(--shadow-card)" }}>
-              <div className="text-xl sm:text-2xl md:text-3xl font-bold text-accent">{s.val}</div>
-              <p className="text-muted-foreground text-xs sm:text-sm mt-1">{s.label}</p>
-            </div>
-          ))}
+      {/* ===== STATS — alt background ===== */}
+      <section className="section-alt py-14 md:py-16">
+        <div className="container mx-auto px-5 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-3 gap-4 fade-in fade-in-delay-1">
+            {[
+              { val: "R$20M+", label: "Em negócios" },
+              { val: "6+", label: "Unidades entregues" },
+              { val: "100%", label: "Satisfação" },
+            ].map((s, i) => (
+              <div key={i} className="text-center p-5 rounded-xl border border-white/10">
+                <div className="text-xl sm:text-2xl md:text-3xl font-bold text-accent">{s.val}</div>
+                <p className="text-current/50 text-xs sm:text-sm mt-1">{s.label}</p>
+              </div>
+            ))}
+          </div>
         </div>
+      </section>
 
-        {/* What's in the event */}
-        <div className="mb-16 fade-in fade-in-delay-2">
-          <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">
+      {/* ===== EVENT — default background ===== */}
+      <section className="py-14 md:py-20">
+        <div className="container mx-auto px-5 sm:px-6 lg:px-8 fade-in fade-in-delay-2">
+          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">
             O que teremos no <span className="text-accent">evento</span>
           </h2>
           <div className="grid sm:grid-cols-2 gap-3 max-w-3xl mx-auto">
@@ -129,10 +132,12 @@ const Index = () => {
             ))}
           </div>
         </div>
+      </section>
 
-        {/* Gallery */}
-        <div className="mb-16 fade-in fade-in-delay-3">
-          <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">
+      {/* ===== GALLERY — alt background ===== */}
+      <section className="section-alt py-14 md:py-20">
+        <div className="container mx-auto px-5 sm:px-6 lg:px-8 fade-in fade-in-delay-3">
+          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">
             Unidades <span className="text-accent">Entregues</span>
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
@@ -143,10 +148,12 @@ const Index = () => {
             ))}
           </div>
         </div>
+      </section>
 
-        {/* CEO + CTA */}
-        <div className="fade-in fade-in-delay-4 max-w-3xl mx-auto">
-          <div className="flex flex-col sm:flex-row items-center gap-6 p-6 md:p-8 rounded-2xl bg-card border border-border" style={{ boxShadow: "var(--shadow-card)" }}>
+      {/* ===== CEO + CTA — default background ===== */}
+      <section className="py-14 md:py-20">
+        <div className="container mx-auto px-5 sm:px-6 lg:px-8 fade-in fade-in-delay-4">
+          <div className="max-w-3xl mx-auto flex flex-col sm:flex-row items-center gap-6 p-6 md:p-8 rounded-2xl bg-card border border-border" style={{ boxShadow: "var(--shadow-card)" }}>
             <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-2xl overflow-hidden shrink-0 border-2 border-accent/20">
               <img src={ceoPortrait} alt="Victor Alfenas" className="w-full h-full object-cover" />
             </div>
@@ -162,7 +169,7 @@ const Index = () => {
                 href="https://wa.me/5500000000000?text=Olá! Quero participar do evento de pré-lançamento da Rarity Chalés!"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-green inline-block text-xs py-3 px-6"
+                className="btn-accent inline-block text-xs py-3 px-6"
               >
                 Garantir Minha Vaga
               </a>
@@ -172,9 +179,9 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-6 border-t border-border text-center">
+      <footer className="section-alt py-6 border-t border-white/10 text-center">
         <p className="text-accent font-semibold mb-1">Rarity Chalés</p>
-        <p className="text-muted-foreground text-xs">
+        <p className="text-current/40 text-xs">
           © {new Date().getFullYear()} Rarity Chalés. Todos os direitos reservados.
         </p>
       </footer>
