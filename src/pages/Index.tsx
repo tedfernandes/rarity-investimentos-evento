@@ -48,8 +48,11 @@ const Index = () => {
 
         <div className="relative z-10 container mx-auto px-3 sm:px-6 lg:px-8" style={{ marginTop: "-70px" }}>
           <div className="max-w-2xl fade-in text-center sm:text-left mx-auto sm:mx-0">
-            <img src={logoRarity} alt="Rarity Chalés" className="w-40 sm:w-48 mb-2 mx-auto sm:mx-0 invert" style={{ marginLeft: "-20px" }} />
-            <div style={{ marginTop: "-50px" }}>
+            <div className="relative inline-block w-20 sm:w-24 mb-2 mx-auto sm:mx-0" style={{ marginLeft: "-10px" }}>
+              <img src={logoRarity} alt="Rarity Chalés" className="w-full invert" />
+              <div className="absolute inset-0 pointer-events-none logo-shimmer" />
+            </div>
+            <div style={{ marginTop: "-25px" }}>
             <span className="inline-block px-3 py-1 rounded-full text-xs font-medium tracking-widest uppercase border border-white/20 bg-white/10 text-white/80 mb-5 backdrop-blur-sm">
               Evento Exclusivo
             </span>
