@@ -69,23 +69,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* ===== STATS — alt background ===== */}
-      <section className="section-alt py-14 md:py-16">
-        <div className="container mx-auto px-5 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-3 gap-4 fade-in fade-in-delay-1">
-            {[
-              { val: "R$20M+", label: "Em negócios" },
-              { val: "6+", label: "Unidades entregues" },
-              { val: "100%", label: "Satisfação" },
-            ].map((s, i) => (
-              <div key={i} className="text-center p-5 rounded-xl border border-white/10">
-                <div className="text-xl sm:text-2xl md:text-3xl font-bold text-accent">{s.val}</div>
-                <p className="text-current/50 text-xs sm:text-sm mt-1">{s.label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* ===== EVENT — default background ===== */}
       <section className="py-14 md:py-20">
