@@ -53,7 +53,7 @@ const Index = () => {
               Evento ao vivo com o CEO <strong className="text-white">Victor Alfenas</strong>.
               Saiba como ser sócio neste empreendimento de sucesso. Não fique de fora desta oportunidade.
             </p>
-            <div className="flex flex-wrap gap-5 mb-10">
+            <div className="inline-flex flex-wrap gap-5 mb-10 px-5 py-3 rounded-full border border-transparent shimmer-border">
               <span className="flex items-center gap-2 text-sm text-white/60">
                 <span className="relative flex h-3 w-3">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75"></span>
