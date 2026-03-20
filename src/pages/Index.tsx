@@ -112,7 +112,7 @@ const Index = () => {
 
       {/* ===== GALLERY — alt background ===== */}
       <section className="section-alt py-14 md:py-20">
-        <div className="container mx-auto px-5 sm:px-6 lg:px-12 fade-in fade-in-delay-3">
+        <div className="container mx-auto px-5 sm:px-6 lg:px-12 scroll-reveal">
           <div className="text-center mb-8">
             <span className="inline-block px-3 py-1 rounded-full text-xs font-medium tracking-widest uppercase border border-black/20 bg-black/5 text-black/70 mb-3">
               Unidades Entregues
