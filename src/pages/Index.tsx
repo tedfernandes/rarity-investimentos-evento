@@ -58,14 +58,14 @@ const Index = () => {
       </button>
 
       {/* ===== HERO — full viewport, immersive ===== */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen flex items-end overflow-hidden">
         <div className="absolute inset-0">
           <img src={heroBg} alt="" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
         </div>
 
-        <div className="relative z-10 container mx-auto px-5 sm:px-6 lg:px-8 py-32 text-center">
-          <div className="max-w-2xl mx-auto fade-in">
+        <div className="relative z-10 container mx-auto px-5 sm:px-6 lg:px-8 pb-16 md:pb-24 pt-32">
+          <div className="max-w-2xl fade-in">
             <span className="inline-block px-3 py-1 rounded-full text-xs font-medium tracking-widest uppercase border border-white/20 bg-white/10 text-white/80 mb-5 backdrop-blur-sm">
               Evento Exclusivo
             </span>
@@ -73,11 +73,11 @@ const Index = () => {
               Pré-lançamento da{" "}
               <span className="glow-accent">Expansão Rarity Chalés</span>
             </h1>
-            <p className="text-white/70 text-base md:text-lg leading-relaxed mb-8 max-w-lg mx-auto">
+            <p className="text-white/70 text-base md:text-lg leading-relaxed mb-8 max-w-lg">
               Evento ao vivo com o CEO <strong className="text-white">Victor Alfenas</strong>.
               Saiba como ser sócio neste empreendimento de sucesso.
             </p>
-            <div className="flex flex-wrap justify-center gap-5 mb-10">
+            <div className="flex flex-wrap gap-5 mb-10">
               <span className="flex items-center gap-2 text-sm text-white/60">
                 <svg className="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/></svg>
                 100% Gratuito
