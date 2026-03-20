@@ -42,7 +42,7 @@ const Index = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-[hsl(0_0%_6%)] via-black/40 to-transparent" />
         </div>
 
-        <div className="relative z-10 container mx-auto px-3 sm:px-6 lg:px-8" style={{ marginTop: "-40px" }}>
+        <div className="relative z-10 container mx-auto px-3 sm:px-6 lg:px-8" style={{ marginTop: "-70px" }}>
           <div className="max-w-2xl fade-in text-center sm:text-left mx-auto sm:mx-0">
             <img src={logoRarity} alt="Rarity Chalés" className="w-40 sm:w-48 mb-2 mx-auto sm:mx-0 invert" style={{ marginLeft: "-20px" }} />
             <div style={{ marginTop: "-50px" }}>
