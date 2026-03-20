@@ -28,6 +28,9 @@ const highlights = [
 ];
 
 const Index = () => {
+  useScrollReveal();
+  useParallax();
+
   useEffect(() => {
     document.documentElement.classList.add("dark");
   }, []);
