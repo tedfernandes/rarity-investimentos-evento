@@ -71,7 +71,7 @@ const Index = () => {
             </span>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-[1.05] mb-5 text-white" style={{ textWrap: "balance" }}>
               Pré-lançamento da{" "}
-              <span className="text-accent glow-accent">Expansão Rarity</span> Chalés
+              <span className="glow-accent">Expansão Rarity Chalés</span>
             </h1>
             <p className="text-white/70 text-base md:text-lg leading-relaxed mb-8 max-w-lg">
               Evento ao vivo com o CEO <strong className="text-white">Victor Alfenas</strong>.
