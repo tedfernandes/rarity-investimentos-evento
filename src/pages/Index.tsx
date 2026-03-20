@@ -136,11 +136,11 @@ const Index = () => {
           <div className="max-w-5xl mx-auto grid md:grid-cols-[3fr_1fr] gap-6 items-stretch">
             {/* Bio Card */}
             <div className="flex flex-col sm:flex-row items-center gap-6 p-6 md:p-8 rounded-2xl bg-card border border-border" style={{ boxShadow: "var(--shadow-card)" }}>
-              <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-2xl overflow-hidden shrink-0 border-2 border-accent/20">
+              <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-2xl overflow-hidden shrink-0 border-2 border-accent/20">
                 <img src={ceoPortrait} alt="Victor Alfenas" className="w-full h-full object-cover" />
               </div>
               <div className="text-center sm:text-left flex-1">
-                <h3 className="text-xl font-bold mb-1">
+                <h3 className="text-2xl md:text-3xl font-bold mb-1">
                   Victor <span className="text-accent">Alfenas</span>
                 </h3>
                 <p className="text-xs text-accent uppercase tracking-wider mb-3">CEO da Rarity Chalés</p>
