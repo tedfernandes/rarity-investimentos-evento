@@ -43,8 +43,9 @@ const Index = () => {
         </div>
 
         <div className="relative z-10 container mx-auto px-3 sm:px-6 lg:px-8 py-20 md:py-32">
-          <div className="max-w-2xl fade-in text-center sm:text-left mx-auto sm:mx-0" style={{ marginTop: "-90px" }}>
+          <div className="max-w-2xl fade-in text-center sm:text-left mx-auto sm:mx-0">
             <img src={logoRarity} alt="Rarity Chalés" className="w-40 sm:w-48 mb-2 mx-auto sm:mx-0 invert" style={{ marginLeft: "-20px" }} />
+            <div style={{ marginTop: "-100px" }}>
             <span className="inline-block px-3 py-1 rounded-full text-xs font-medium tracking-widest uppercase border border-white/20 bg-white/10 text-white/80 mb-5 backdrop-blur-sm">
               Evento Exclusivo
             </span>
@@ -83,6 +84,7 @@ const Index = () => {
             >
               Quero Participar
             </a>
+            </div>
           </div>
         </div>
       </section>
