@@ -81,8 +81,7 @@ const Index = () => {
             </div>
             <br />
             <a
-              href="https://wa.me/5500000000000?text=Olá! Quero participar do evento de pré-lançamento da Rarity Chalés!"
-              target="_blank"
+              href="https://wa.me/5522999013766              target="_blank"
               rel="noopener noreferrer"
               className="btn-green inline-block text-xs sm:text-sm"
             >
@@ -164,7 +163,7 @@ const Index = () => {
                   Empresário, mentor e pai de família. Já administrou mais de <strong className="text-accent">R$20 milhões em obras próprias</strong>, sendo mais de 20 unidades entre prédios, casas de alto padrão e chalés de luxo. Venha conhecer a oportunidade.
                 </p>
                 <a
-                  href="https://wa.me/5500000000000?text=Olá! Quero participar do evento de pré-lançamento da Rarity Chalés!"
+                  href="https://wa.me/5522999013766"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-green inline-block text-xs py-3 px-6"
