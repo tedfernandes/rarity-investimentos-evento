@@ -60,6 +60,7 @@ const HeroSection = () => {
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => {
+              console.log("Lead event triggered");
               fbq("track", "Lead");
             }}
             className="btn-green inline-block text-base"
